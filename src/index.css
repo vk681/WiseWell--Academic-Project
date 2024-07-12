@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utility to hide scrollbars */
+@layer utilities {
+  .hide-scrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  @apply w-full border my-2 py-2 px-3 rounded-xl;
+}
+
+button {
+  @apply bg-gray-300;
+}
+
+button.primary {
+  @apply bg-primary p-2 w-full text-white rounded-2xl;
+}
